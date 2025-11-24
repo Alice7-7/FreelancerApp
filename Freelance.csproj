@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E85C373A-3649-4D9E-97F6-2E9432447237}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Freelance</RootNamespace>
+    <AssemblyName>Freelance</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7FBF40B53BFFFD3B066A0F996E3C233C9C7E4CD4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Freelance_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.6.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.Licensing.6.1.1\lib\net48\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.9.0.1\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.31.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.31.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.7\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.4.0\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.9.0.7\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.9.0.7\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.9.0.7\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.7\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.6.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.6\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\Client.cs" />
+    <Compile Include="class\db_connection.cs" />
+    <Compile Include="class\Freelance.cs" />
+    <Compile Include="class\Notification.cs" />
+    <Compile Include="class\Project.cs" />
+    <Compile Include="class\Session.cs" />
+    <Compile Include="class\User.cs" />
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="client_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_profile.Designer.cs">
+      <DependentUpon>client_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\bid_control.cs" />
+    <Compile Include="Controllers\client_info_control.cs" />
+    <Compile Include="Controllers\freelance_control.cs" />
+    <Compile Include="Controllers\loginattempt_control.cs" />
+    <Compile Include="Controllers\login_control.cs" />
+    <Compile Include="Controllers\notification_control.cs" />
+    <Compile Include="Controllers\project_control.cs" />
+    <Compile Include="Controllers\register_control.cs" />
+    <Compile Include="create_client_pf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_client_pf.Designer.cs">
+      <DependentUpon>create_client_pf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_freelance_pf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_freelance_pf.Designer.cs">
+      <DependentUpon>create_freelance_pf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_project.Designer.cs">
+      <DependentUpon>create_project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback.Designer.cs">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="load_bids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="load_bids.Designer.cs">
+      <DependentUpon>load_bids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="locked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locked.Designer.cs">
+      <DependentUpon>locked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="project_bid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project_bid.Designer.cs">
+      <DependentUpon>project_bid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="project_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project_details.Designer.cs">
+      <DependentUpon>project_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="review_bids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="review_bids.Designer.cs">
+      <DependentUpon>review_bids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="review_projects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="review_projects.Designer.cs">
+      <DependentUpon>review_projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="role.Designer.cs">
+      <DependentUpon>role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="freelance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="freelance.Designer.cs">
+      <DependentUpon>freelance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="freelance_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="freelance_profile.Designer.cs">
+      <DependentUpon>freelance_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\Password_Hash.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="started.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="started.Designer.cs">
+      <DependentUpon>started.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_freelancer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_freelancer.Designer.cs">
+      <DependentUpon>view_freelancer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_profile.resx">
+      <DependentUpon>client_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_client_pf.resx">
+      <DependentUpon>create_client_pf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_freelance_pf.resx">
+      <DependentUpon>create_freelance_pf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_project.resx">
+      <DependentUpon>create_project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.resx">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="freelance.resx">
+      <DependentUpon>freelance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="freelance_profile.resx">
+      <DependentUpon>freelance_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="load_bids.resx">
+      <DependentUpon>load_bids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locked.resx">
+      <DependentUpon>locked.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="project_bid.resx">
+      <DependentUpon>project_bid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="project_details.resx">
+      <DependentUpon>project_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="review_bids.resx">
+      <DependentUpon>review_bids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="review_projects.resx">
+      <DependentUpon>review_projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="role.resx">
+      <DependentUpon>role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="started.resx">
+      <DependentUpon>started.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_freelancer.resx">
+      <DependentUpon>view_freelancer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Freelance_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\deal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\deal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\default_pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
